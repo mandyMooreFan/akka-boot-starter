@@ -1,0 +1,9 @@
+version: '1'
+services:
+  website:
+    build:
+      context: .
+    image: website:latest
+    ports:
+      - "80:80"
+    container_name: website
