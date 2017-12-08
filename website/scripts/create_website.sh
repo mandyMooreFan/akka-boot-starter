@@ -1,4 +1,4 @@
 #!/usr/bin/env bash
 
-npm install -g create-react-app
-create-react-app frontend
+git clone --depth=1 https://github.com/react-boilerplate/react-boilerplate.git
+
