@@ -1,12 +1,13 @@
-FROM node:latest
+FROM node:carbon
 
-# set working directory
-RUN mkdir /usr/src/app
-WORKDIR /usr/src/app
+WORKDIR /ui
 
-# install and cache app dependencies
-ADD package.json /usr/src/app/package.json
 RUN npm install
+# If you are building your code for production
+# RUN npm install --only=production
 
-# start app
-CMD ["npm", "start"]
+# Bundle app source
+COPY . .
+
+EXPOSE 8080
+CMD [ "npm", "start" ]
