@@ -1,8 +1,9 @@
 services:
   website:
-    build:
-      context: .
+    build: Dockerfile
+    container_name: website
     image: website:latest
+    working_dir: /ui
     ports:
       - "80:80"
-    container_name: website
+    command: npm start
