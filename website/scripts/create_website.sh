@@ -10,9 +10,9 @@ cd ui
 echo 'Clone Complete, running NPM setup'
 npm run setup
 echo 'Run setup Complete'
-mv ./scripts/Dockerfile /ui
-mv ./scripts/docker-compose.yml /ui
-mv ./scripts/docker-compose-production.yml /ui
+mv ./scripts/Dockerfile ./ui
+mv ./scripts/docker-compose.yml ./ui
+mv ./scripts/docker-compose-production.yml ./ui
 
 echo 'Finished.'
 
