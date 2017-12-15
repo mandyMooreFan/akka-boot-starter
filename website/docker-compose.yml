@@ -1,9 +1,10 @@
-services:
-  website:
-    build: Dockerfile
-    container_name: website
-    image: website:latest
-    working_dir: /ui
-    ports:
-      - "80:80"
-    command: npm start
+web:
+  container_name: web
+  build: ./ui/
+  volumes:
+    - './ui:/src/app'
+    - './ui/package.json:/src/package.json'
+  ports:
+    - '3000:3000'
+  environment:
+    - NODE_ENV=${NODE_ENV}

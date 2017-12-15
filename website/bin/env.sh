@@ -9,5 +9,5 @@ dev() {
 }
 
 prod() {
-    docker-compose -f docker-compose.yml -f $DOCKER_CONFIG_PROD "$@"
+    docker-compose -f docker-compose-production.yml -f $DOCKER_CONFIG_PROD "$@"
 }
