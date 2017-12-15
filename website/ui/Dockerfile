@@ -1,12 +1,11 @@
 FROM node:alpine
 
 # set working directory
-RUN mkdir /src
-WORKDIR /src
+WORKDIR /ui
 
 # install app dependencies
-ENV PATH /ui/node_modules/.bin:$PATH
-ADD package.json /src/package.json
+ENV PATH /node_modules/.bin:$PATH
+ADD package.json package.json
 RUN npm install
 
 # start app

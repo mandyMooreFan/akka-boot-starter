@@ -1,3 +1,0 @@
-# This is necessary to make docker-compose build work on Windows.
-target/streams
-target/test-reports

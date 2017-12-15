@@ -2,9 +2,9 @@ web:
   container_name: web
   build: ./ui/
   volumes:
-    - './ui:/src/app'
-    - './ui/package.json:/src/package.json'
+    - './ui:/app'
+    - './ui/package.json:/package.json'
   ports:
     - '3000:3000'
   environment:
-    - NODE_ENV=${NODE_ENV}
+    - NODE_ENV=development
