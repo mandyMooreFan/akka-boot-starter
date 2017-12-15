@@ -9,6 +9,11 @@ mv react-boilerplate ui
 cd ui
 echo 'Clone Complete, running NPM setup'
 npm run setup
+echo 'Run setup Complete'
+mv Dockerfile /ui/Dockerfile
+mv docker-compose.yml /ui/docker-compose.yml
+mv docker-compose-production.yml /ui/docker-compose-production.yml
+
 echo 'Finished.'
 
 

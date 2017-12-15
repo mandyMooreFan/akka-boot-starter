@@ -5,7 +5,7 @@ WORKDIR /ui
 
 # install app dependencies
 ENV PATH /node_modules/.bin:$PATH
-ADD package.json package.json
+ADD ../ui/package.json package.json
 RUN npm install
 
 # start app
